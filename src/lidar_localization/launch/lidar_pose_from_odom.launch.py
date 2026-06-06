@@ -2,12 +2,16 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
     params_file = LaunchConfiguration("params_file")
     input_odom_topic = LaunchConfiguration("input_odom_topic")
+    zero_on_first_pose = LaunchConfiguration("zero_on_first_pose")
+    zero_delay_sec = LaunchConfiguration("zero_delay_sec")
+    zero_frame_id = LaunchConfiguration("zero_frame_id")
 
     return LaunchDescription(
         [
@@ -22,6 +26,9 @@ def generate_launch_description():
                 ),
             ),
             DeclareLaunchArgument("input_odom_topic", default_value="/Odometry"),
+            DeclareLaunchArgument("zero_on_first_pose", default_value="true"),
+            DeclareLaunchArgument("zero_delay_sec", default_value="5.0"),
+            DeclareLaunchArgument("zero_frame_id", default_value="lidar_start"),
             Node(
                 package="lidar_localization",
                 executable="pose_from_odom",
@@ -29,7 +36,16 @@ def generate_launch_description():
                 output="screen",
                 parameters=[
                     params_file,
-                    {"input_odom_topic": input_odom_topic},
+                    {
+                        "input_odom_topic": input_odom_topic,
+                        "zero_on_first_pose": ParameterValue(
+                            zero_on_first_pose, value_type=bool
+                        ),
+                        "zero_delay_sec": ParameterValue(
+                            zero_delay_sec, value_type=float
+                        ),
+                        "zero_frame_id": zero_frame_id,
+                    },
                 ],
             ),
         ]

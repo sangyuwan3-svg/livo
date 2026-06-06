@@ -23,6 +23,7 @@ setup(
         "console_scripts": [
             "pose_from_odom = lidar_localization.pose_from_odom:main",
             "print_lidar_pose = lidar_localization.print_lidar_pose:main",
+            "print_xy_yaw = lidar_localization.print_xy_yaw:main",
         ],
     },
 )

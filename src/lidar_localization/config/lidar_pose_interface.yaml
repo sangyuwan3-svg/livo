@@ -6,11 +6,17 @@ lidar_pose_from_odom:
     output_odom_topic: /lidar/odom
     lidar_frame: livox_frame
     base_frame: base_link
-    publish_tf: false
-    output_base_frame: false
+    publish_tf: true
+    publish_static_tf: true
+    output_base_frame: true
     zero_on_first_pose: true
     zero_delay_sec: 5.0
     zero_frame_id: lidar_start
-    lidar_to_base_xyz: [0.0, 0.0, 0.0]
-    lidar_to_base_rpy: [0.0, 0.0, 0.0]
+    # Measured mounting in base_link frame:
+    #   base_link -> livox_frame translation = [-0.2547, -0.23827579454, 0.0]
+    #   base_link -> livox_frame yaw = +90 deg
+    # Parameters below are the inverse transform used internally:
+    #   livox_frame -> base_link translation/rotation.
+    lidar_to_base_xyz: [0.23827579454, -0.2547, 0.0]
+    lidar_to_base_rpy: [0.0, 0.0, -1.5707963267948966]
     log_period_sec: 1.0

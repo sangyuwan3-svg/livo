@@ -105,6 +105,39 @@ The map is saved to:
 ~/lidar/maps/mid360_map.pcd
 ```
 
+## Map Relocalization
+
+Use this mode after a map has already been saved. It loads `mid360_map.pcd`, aligns the current FAST-LIO registered scan to the saved map, and publishes LiDAR pose in the fixed `map` frame.
+
+```bash
+cd ~/lidar
+./scripts/run_mid360_relocalization.sh
+```
+
+Main outputs:
+
+- `/map_lidar/odom`: map-frame odometry from PCD map relocalization
+- `/map_lidar/pose`: map-frame pose from PCD map relocalization
+- `/lidar/pose`: stable public pose interface, now driven by `/map_lidar/odom`
+- `/lidar/point`: stable public xyz coordinate in `map`
+- `/localization/map`: loaded localization map point cloud
+
+Check relocalization:
+
+```bash
+source ~/lidar/scripts/source_lidar.sh
+ros2 topic hz /map_lidar/odom
+ros2 topic echo --once /lidar/point
+```
+
+If the robot does not start near the original map origin, give the localizer an approximate initial pose in RViz with `2D Pose Estimate`. The NDT/ICP relocalizer needs a reasonable starting guess; it is not magic teleportation.
+
+Coordinate meaning:
+
+- During first-time mapping, the map origin is still the place where that mapping run started.
+- During later relocalization runs, the robot is placed back into that saved map frame, so the current power-on position is no longer treated as `(0, 0, 0)`.
+- If you rebuild the map from scratch, the map origin changes to the new mapping run's start.
+
 ## LiDAR Pose Coordinates
 
 After `run_mid360_fast_lio.sh` is running, print the current LiDAR pose:
@@ -124,29 +157,29 @@ ros2 topic echo /lidar/point
 Important frames:
 
 - `/Odometry`: FAST-LIO raw odometry, usually `camera_init -> body`
-- `/lidar/pose`: LiDAR pose re-exposed by this workspace
-- `/lidar/point`: LiDAR xyz position only
-- `/lidar/odom`: same pose as odometry, with the child frame set by our interface
+- `/lidar/pose`: vehicle rotation-center pose re-exposed by this workspace
+- `/lidar/point`: vehicle rotation-center xyz position only
+- `/lidar/odom`: same pose as odometry, with child frame `base_link`
 
-For now, `/lidar/pose` represents the MID-360/LiDAR body pose produced from FAST-LIO odometry. The later LiDAR-to-vehicle-center transform is intentionally left as a parameterized interface in:
+The MID-360-to-vehicle-center extrinsic is configured in:
 
 ```bash
 ~/lidar/src/lidar_localization/config/lidar_pose_interface.yaml
 ```
+
+Current mechanical mounting:
+
+- vehicle `+Y` matches LiDAR `+X`
+- vehicle `+X` matches LiDAR `-Y`
+- LiDAR position in the vehicle frame is `x=-0.2547m`, `y=-0.23827579454m`, `z=0.0m`
+
+The interface publishes `/lidar/*` in the mechanical vehicle `base_link` frame without rotating the x/y axes. The helper script `print_xy_yaw.sh` applies only a yaw display offset, so the printed yaw is near `0deg` when the vehicle heading is along mechanical `+Y`.
 
 By default, this workspace waits 5 seconds after the first FAST-LIO odometry message, then locks the `/lidar/*` output origin. Keep the robot still during those first 5 seconds. To reset the output origin later:
 
 ```bash
 cd ~/lidar
 ./scripts/reset_lidar_origin.sh
-```
-
-When the LiDAR-to-vehicle-center extrinsic is measured, set:
-
-```yaml
-output_base_frame: true
-lidar_to_base_xyz: [0.0, 0.0, 0.0]
-lidar_to_base_rpy: [0.0, 0.0, 0.0]
 ```
 
 ## Point Coordinates

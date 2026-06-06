@@ -7,7 +7,7 @@ from geometry_msgs.msg import PointStamped, Pose, PoseStamped, TransformStamped
 from nav_msgs.msg import Odometry
 from rclpy.node import Node
 from std_srvs.srv import Trigger
-from tf2_ros import TransformBroadcaster
+from tf2_ros import StaticTransformBroadcaster, TransformBroadcaster
 
 from .pose_math import (
     point_from_iter,
@@ -32,6 +32,7 @@ class PoseFromOdom(Node):
         self.declare_parameter("lidar_frame", "livox_frame")
         self.declare_parameter("base_frame", "base_link")
         self.declare_parameter("publish_tf", False)
+        self.declare_parameter("publish_static_tf", False)
         self.declare_parameter("output_base_frame", False)
         self.declare_parameter("zero_on_first_pose", True)
         self.declare_parameter("zero_delay_sec", 5.0)
@@ -47,6 +48,7 @@ class PoseFromOdom(Node):
         self.lidar_frame = self.get_parameter("lidar_frame").value
         self.base_frame = self.get_parameter("base_frame").value
         self.publish_tf = bool(self.get_parameter("publish_tf").value)
+        self.publish_static_tf = bool(self.get_parameter("publish_static_tf").value)
         self.output_base_frame = bool(self.get_parameter("output_base_frame").value)
         self.zero_on_first_pose = bool(self.get_parameter("zero_on_first_pose").value)
         self.zero_delay_sec = float(self.get_parameter("zero_delay_sec").value)
@@ -69,6 +71,11 @@ class PoseFromOdom(Node):
         self.tf_broadcaster: Optional[TransformBroadcaster] = (
             TransformBroadcaster(self) if self.publish_tf else None
         )
+        self.static_tf_broadcaster: Optional[StaticTransformBroadcaster] = (
+            StaticTransformBroadcaster(self) if self.publish_static_tf else None
+        )
+        if self.static_tf_broadcaster:
+            self.broadcast_static_base_to_lidar_tf()
 
         self.last_log_time = self.get_clock().now()
         self.subscription = self.create_subscription(
@@ -171,6 +178,25 @@ class PoseFromOdom(Node):
             lidar_pose.orientation, self.lidar_to_base_rotation
         )
         return base_pose
+
+    def broadcast_static_base_to_lidar_tf(self) -> None:
+        base_to_lidar_rotation = quat_inverse(self.lidar_to_base_rotation)
+
+        negative_offset = PointStamped().point
+        negative_offset.x = -self.lidar_to_base_translation.x
+        negative_offset.y = -self.lidar_to_base_translation.y
+        negative_offset.z = -self.lidar_to_base_translation.z
+        base_to_lidar_translation = rotate_point(base_to_lidar_rotation, negative_offset)
+
+        transform = TransformStamped()
+        transform.header.stamp = self.get_clock().now().to_msg()
+        transform.header.frame_id = self.base_frame
+        transform.child_frame_id = self.lidar_frame
+        transform.transform.translation.x = base_to_lidar_translation.x
+        transform.transform.translation.y = base_to_lidar_translation.y
+        transform.transform.translation.z = base_to_lidar_translation.z
+        transform.transform.rotation = base_to_lidar_rotation
+        self.static_tf_broadcaster.sendTransform(transform)
 
     def pose_relative_to_initial(self, pose: Pose) -> Pose:
         if self.initial_pose is None:
