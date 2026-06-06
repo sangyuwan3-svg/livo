@@ -1,0 +1,22 @@
+[0.363s] Invoking command in '/home/sangyuwan/lidar/src/lidar_localization': PYTHONPATH=/home/sangyuwan/lidar/build/lidar_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sangyuwan/lidar/install/lidar_localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_localization build --build-base /home/sangyuwan/lidar/build/lidar_localization/build install --record /home/sangyuwan/lidar/build/lidar_localization/install.log --single-version-externally-managed install_data
+[0.494s] running egg_info
+[0.495s] writing ../../build/lidar_localization/lidar_localization.egg-info/PKG-INFO
+[0.495s] writing dependency_links to ../../build/lidar_localization/lidar_localization.egg-info/dependency_links.txt
+[0.495s] writing entry points to ../../build/lidar_localization/lidar_localization.egg-info/entry_points.txt
+[0.495s] writing requirements to ../../build/lidar_localization/lidar_localization.egg-info/requires.txt
+[0.495s] writing top-level names to ../../build/lidar_localization/lidar_localization.egg-info/top_level.txt
+[0.496s] reading manifest file '../../build/lidar_localization/lidar_localization.egg-info/SOURCES.txt'
+[0.497s] writing manifest file '../../build/lidar_localization/lidar_localization.egg-info/SOURCES.txt'
+[0.497s] running build
+[0.497s] running build_py
+[0.497s] running install
+[0.497s] running install_lib
+[0.498s] running install_data
+[0.498s] running install_egg_info
+[0.499s] removing '/home/sangyuwan/lidar/install/lidar_localization/lib/python3.10/site-packages/lidar_localization-0.1.0-py3.10.egg-info' (and everything under it)
+[0.499s] Copying ../../build/lidar_localization/lidar_localization.egg-info to /home/sangyuwan/lidar/install/lidar_localization/lib/python3.10/site-packages/lidar_localization-0.1.0-py3.10.egg-info
+[0.500s] running install_scripts
+[0.514s] Installing pose_from_odom script to /home/sangyuwan/lidar/install/lidar_localization/lib/lidar_localization
+[0.514s] Installing print_lidar_pose script to /home/sangyuwan/lidar/install/lidar_localization/lib/lidar_localization
+[0.514s] writing list of installed files to '/home/sangyuwan/lidar/build/lidar_localization/install.log'
+[0.535s] Invoked command in '/home/sangyuwan/lidar/src/lidar_localization' returned '0': PYTHONPATH=/home/sangyuwan/lidar/build/lidar_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sangyuwan/lidar/install/lidar_localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lidar_localization build --build-base /home/sangyuwan/lidar/build/lidar_localization/build install --record /home/sangyuwan/lidar/build/lidar_localization/install.log --single-version-externally-managed install_data

@@ -1,0 +1,4 @@
+[console_scripts]
+pose_from_odom = lidar_localization.pose_from_odom:main
+print_lidar_pose = lidar_localization.print_lidar_pose:main
+

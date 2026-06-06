@@ -1,0 +1,559 @@
+[0.000000] (-) TimerEvent: {}
+[0.000175] (livox_ros_driver2) JobQueued: {'identifier': 'livox_ros_driver2', 'dependencies': OrderedDict()}
+[0.000257] (lidar_bringup) JobQueued: {'identifier': 'lidar_bringup', 'dependencies': OrderedDict([('livox_ros_driver2', '/home/sangyuwan/lidar/install/livox_ros_driver2')])}
+[0.000411] (livox_ros_driver2) JobStarted: {'identifier': 'livox_ros_driver2'}
+[0.006802] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'cmake'}
+[0.007264] (livox_ros_driver2) Command: {'cmd': ['/usr/bin/cmake', '/home/sangyuwan/lidar/src/livox_ros_driver2', '-DROS_EDITION=ROS2', '-DDISTRO_ROS=humble', '-DLIVOX_LIDAR_SDK_ROOT=/home/sangyuwan/lidar/third_party/Livox-SDK2/install', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_INSTALL_PREFIX=/home/sangyuwan/lidar/install/livox_ros_driver2'], 'cwd': '/home/sangyuwan/lidar/build/livox_ros_driver2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'sangyuwan'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/sangyuwan/STM32CubeMX'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/sangyuwan/lidar/third_party/Livox-SDK2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64'), ('HOME', '/home/sangyuwan'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'cat'), ('LIVOX_LIDAR_SDK_ROOT', '/home/sangyuwan/lidar/third_party/Livox-SDK2/install'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2302'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('_CE_M', ''), ('https_proxy', 'http://127.0.0.1:7897/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'sangyuwan'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/sangyuwan/.local/bin:/home/sangyuwan/.codex/tmp/arg0/codex-arg0Uz7cGc:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/sangyuwan/.local/bin:/opt/ros/humble/bin:/home/sangyuwan/anaconda3/condabin:/usr/local/cuda-12.8/bin:/home/sangyuwan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:@/tmp/.ICE-unix/2083,unix/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:/tmp/.ICE-unix/2083'), ('GDM_LANG', 'zh_CN'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/62a2a973_b92f_42d0_9770_497a045623f2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/home/sangyuwan/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.208'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/sangyuwan'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/sangyuwan/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019e9c2c-2052-7d32-909f-23b035974b0a'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sangyuwan/lidar/build/livox_ros_driver2'), ('LC_ALL', 'C.UTF-8'), ('CODEX_MANAGED_PACKAGE_ROOT', '/usr/lib/node_modules/@openai/codex'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sangyuwan/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('CODEX_MANAGED_BY_NPM', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.055270] (livox_ros_driver2) StdoutLine: {'line': b'-- The C compiler identification is GNU 12.3.0\n'}
+[0.096916] (livox_ros_driver2) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.099743] (-) TimerEvent: {}
+[0.102222] (livox_ros_driver2) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.159105] (livox_ros_driver2) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.163179] (livox_ros_driver2) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.163323] (livox_ros_driver2) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.163620] (livox_ros_driver2) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.166388] (livox_ros_driver2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199853] (-) TimerEvent: {}
+[0.229734] (livox_ros_driver2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.234002] (livox_ros_driver2) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.234174] (livox_ros_driver2) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.234449] (livox_ros_driver2) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.235129] (livox_ros_driver2) StdoutLine: {'line': b'-- livox_ros_driver2 version: 1.2.6\n'}
+[0.236368] (livox_ros_driver2) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.14 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[0.299937] (-) TimerEvent: {}
+[0.339941] (livox_ros_driver2) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.400088] (-) TimerEvent: {}
+[0.442612] (livox_ros_driver2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.445880] (livox_ros_driver2) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.477090] (livox_ros_driver2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500144] (-) TimerEvent: {}
+[0.537538] (livox_ros_driver2) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.539246] (livox_ros_driver2) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600244] (-) TimerEvent: {}
+[0.615531] (livox_ros_driver2) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.634438] (livox_ros_driver2) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.660738] (livox_ros_driver2) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.668038] (livox_ros_driver2) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.700372] (-) TimerEvent: {}
+[0.734807] (livox_ros_driver2) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.735041] (livox_ros_driver2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.798070] (livox_ros_driver2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.798738] (livox_ros_driver2) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.800427] (-) TimerEvent: {}
+[0.900625] (-) TimerEvent: {}
+[0.925381] (livox_ros_driver2) StdoutLine: {'line': b"-- Checking for module 'eigen3'\n"}
+[0.937856] (livox_ros_driver2) StdoutLine: {'line': b'--   Found eigen3, version 3.4.0\n'}
+[0.972711] (livox_ros_driver2) StdoutLine: {'line': b'-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") \n'}
+[0.972886] (livox_ros_driver2) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.997027] (livox_ros_driver2) StdoutLine: {'line': b"-- Checking for module 'flann'\n"}
+[1.000718] (-) TimerEvent: {}
+[1.007828] (livox_ros_driver2) StdoutLine: {'line': b'--   Found flann, version 1.9.1\n'}
+[1.042194] (livox_ros_driver2) StdoutLine: {'line': b'-- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  \n'}
+[1.042501] (livox_ros_driver2) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[1.100851] (-) TimerEvent: {}
+[1.201045] (-) TimerEvent: {}
+[1.301244] (-) TimerEvent: {}
+[1.401466] (-) TimerEvent: {}
+[1.501617] (-) TimerEvent: {}
+[1.601781] (-) TimerEvent: {}
+[1.701958] (-) TimerEvent: {}
+[1.802168] (-) TimerEvent: {}
+[1.875965] (livox_ros_driver2) StdoutLine: {'line': b"-- Checking for module 'libusb-1.0'\n"}
+[1.888737] (livox_ros_driver2) StdoutLine: {'line': b'--   Found libusb-1.0, version 1.0.25\n'}
+[1.902265] (-) TimerEvent: {}
+[1.921124] (livox_ros_driver2) StdoutLine: {'line': b'-- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  \n'}
+[1.921918] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[1.974513] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.002415] (-) TimerEvent: {}
+[2.079106] (livox_ros_driver2) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[2.085354] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.090201] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.102482] (-) TimerEvent: {}
+[2.190579] (livox_ros_driver2) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[2.202595] (-) TimerEvent: {}
+[2.292755] (livox_ros_driver2) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.302691] (-) TimerEvent: {}
+[2.394369] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  \n'}
+[2.395084] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  \n'}
+[2.395977] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  \n'}
+[2.396715] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  \n'}
+[2.397469] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  \n'}
+[2.398251] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  \n'}
+[2.398712] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_2D: /usr/include/pcl-1.12  \n'}
+[2.399157] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_GEOMETRY: /usr/include/pcl-1.12  \n'}
+[2.399840] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  \n'}
+[2.400963] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  \n'}
+[2.401756] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  \n'}
+[2.402474] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  \n'}
+[2.402744] (-) TimerEvent: {}
+[2.403285] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  \n'}
+[2.404264] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  \n'}
+[2.405053] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  \n'}
+[2.405624] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  \n'}
+[2.406420] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  \n'}
+[2.407227] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  \n'}
+[2.408178] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  \n'}
+[2.408678] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  \n'}
+[2.409465] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  \n'}
+[2.409970] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_MODELER: /usr/include/pcl-1.12  \n'}
+[2.410515] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  \n'}
+[2.411223] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  \n'}
+[2.411774] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  \n'}
+[2.441180] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[2.441722] (livox_ros_driver2) StdoutLine: {'line': b"-- Checking for module 'apr-1'\n"}
+[2.445077] (livox_ros_driver2) StdoutLine: {'line': b"--   No package 'apr-1' found\n"}
+[2.502877] (-) TimerEvent: {}
+[2.594450] (livox_ros_driver2) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.602939] (-) TimerEvent: {}
+[2.703068] (-) TimerEvent: {}
+[2.746375] (livox_ros_driver2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.803193] (-) TimerEvent: {}
+[2.903406] (-) TimerEvent: {}
+[2.947246] (livox_ros_driver2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.962417] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[2.963257] (livox_ros_driver2) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.981227] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[2.981404] (livox_ros_driver2) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.981485] (livox_ros_driver2) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.981555] (livox_ros_driver2) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.997208] (livox_ros_driver2) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.003469] (-) TimerEvent: {}
+[3.091268] (livox_ros_driver2) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.103555] (-) TimerEvent: {}
+[3.107263] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[3.113628] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.114105] (livox_ros_driver2) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/sangyuwan/lidar/src/livox_ros_driver2/3rdparty;/home/sangyuwan/lidar/src/livox_ros_driver2/src\n'}
+[3.114186] (livox_ros_driver2) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.119298] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[3.119382] (livox_ros_driver2) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[3.120248] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.121668] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.122504] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.127667] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.127760] (livox_ros_driver2) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.128492] (livox_ros_driver2) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.130124] (livox_ros_driver2) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.203671] (-) TimerEvent: {}
+[3.220672] (livox_ros_driver2) StdoutLine: {'line': b'-- Generating done\n'}
+[3.236250] (livox_ros_driver2) StdoutLine: {'line': b'-- Build files have been written to: /home/sangyuwan/lidar/build/livox_ros_driver2\n'}
+[3.261135] (livox_ros_driver2) CommandEnded: {'returncode': 0}
+[3.261847] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'build'}
+[3.262343] (livox_ros_driver2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sangyuwan/lidar/build/livox_ros_driver2', '--', '-j16', '-l16'], 'cwd': '/home/sangyuwan/lidar/build/livox_ros_driver2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'sangyuwan'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/sangyuwan/STM32CubeMX'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/sangyuwan/lidar/third_party/Livox-SDK2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64'), ('HOME', '/home/sangyuwan'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'cat'), ('LIVOX_LIDAR_SDK_ROOT', '/home/sangyuwan/lidar/third_party/Livox-SDK2/install'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2302'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('_CE_M', ''), ('https_proxy', 'http://127.0.0.1:7897/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'sangyuwan'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/sangyuwan/.local/bin:/home/sangyuwan/.codex/tmp/arg0/codex-arg0Uz7cGc:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/sangyuwan/.local/bin:/opt/ros/humble/bin:/home/sangyuwan/anaconda3/condabin:/usr/local/cuda-12.8/bin:/home/sangyuwan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:@/tmp/.ICE-unix/2083,unix/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:/tmp/.ICE-unix/2083'), ('GDM_LANG', 'zh_CN'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/62a2a973_b92f_42d0_9770_497a045623f2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/home/sangyuwan/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.208'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/sangyuwan'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/sangyuwan/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019e9c2c-2052-7d32-909f-23b035974b0a'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sangyuwan/lidar/build/livox_ros_driver2'), ('LC_ALL', 'C.UTF-8'), ('CODEX_MANAGED_PACKAGE_ROOT', '/usr/lib/node_modules/@openai/codex'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sangyuwan/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('CODEX_MANAGED_BY_NPM', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[3.300385] (livox_ros_driver2) StdoutLine: {'line': b'[  1%] Generating C code for ROS interfaces\n'}
+[3.303754] (-) TimerEvent: {}
+[3.307753] (livox_ros_driver2) StdoutLine: {'line': b'[  6%] Generating C++ code for ROS interfaces\n'}
+[3.307935] (livox_ros_driver2) StdoutLine: {'line': b'[  6%] Generating Rust code for ROS interfaces\n'}
+[3.308018] (livox_ros_driver2) StdoutLine: {'line': b'[  6%] Building CXX object CMakeFiles/livox_ros_driver2_node.dir/rclcpp_components/node_main_livox_ros_driver2_node.cpp.o\n'}
+[3.315040] (livox_ros_driver2) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_livox_ros_driver2\n'}
+[3.403818] (-) TimerEvent: {}
+[3.458917] (livox_ros_driver2) StdoutLine: {'line': b'running egg_info\n'}
+[3.459375] (livox_ros_driver2) StdoutLine: {'line': b'creating livox_ros_driver2.egg-info\n'}
+[3.459481] (livox_ros_driver2) StdoutLine: {'line': b'writing livox_ros_driver2.egg-info/PKG-INFO\n'}
+[3.459657] (livox_ros_driver2) StdoutLine: {'line': b'writing dependency_links to livox_ros_driver2.egg-info/dependency_links.txt\n'}
+[3.459777] (livox_ros_driver2) StdoutLine: {'line': b'writing top-level names to livox_ros_driver2.egg-info/top_level.txt\n'}
+[3.459883] (livox_ros_driver2) StdoutLine: {'line': b"writing manifest file 'livox_ros_driver2.egg-info/SOURCES.txt'\n"}
+[3.461746] (livox_ros_driver2) StdoutLine: {'line': b"reading manifest file 'livox_ros_driver2.egg-info/SOURCES.txt'\n"}
+[3.462057] (livox_ros_driver2) StdoutLine: {'line': b"writing manifest file 'livox_ros_driver2.egg-info/SOURCES.txt'\n"}
+[3.482559] (livox_ros_driver2) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_build_livox_ros_driver2_egg\n'}
+[3.503902] (-) TimerEvent: {}
+[3.538066] (livox_ros_driver2) StdoutLine: {'line': b'[  6%] Built target livox_interfaces2__rs\n'}
+[3.573090] (livox_ros_driver2) StdoutLine: {'line': b'[  6%] Built target livox_interfaces2__cpp\n'}
+[3.580101] (livox_ros_driver2) StdoutLine: {'line': b'[  8%] Generating C++ type support for eProsima Fast-RTPS\n'}
+[3.580255] (livox_ros_driver2) StdoutLine: {'line': b'[ 10%] Generating C++ type support dispatch for ROS interfaces\n'}
+[3.580382] (livox_ros_driver2) StdoutLine: {'line': b'[ 12%] Generating C++ introspection for ROS interfaces\n'}
+[3.588850] (livox_ros_driver2) StdoutLine: {'line': b'[ 15%] Building C object CMakeFiles/livox_interfaces2__rosidl_generator_c.dir/rosidl_generator_c/livox_ros_driver2/msg/detail/custom_point__functions.c.o\n'}
+[3.588995] (livox_ros_driver2) StdoutLine: {'line': b'[ 15%] Building C object CMakeFiles/livox_interfaces2__rosidl_generator_c.dir/rosidl_generator_c/livox_ros_driver2/msg/detail/custom_msg__functions.c.o\n'}
+[3.603988] (-) TimerEvent: {}
+[3.664200] (livox_ros_driver2) StdoutLine: {'line': b'[ 17%] Linking C shared library liblivox_ros_driver2__rosidl_generator_c.so\n'}
+[3.696289] (livox_ros_driver2) StdoutLine: {'line': b'[ 17%] Built target livox_interfaces2__rosidl_generator_c\n'}
+[3.704121] (-) TimerEvent: {}
+[3.706122] (livox_ros_driver2) StdoutLine: {'line': b'[ 22%] Generating C type support dispatch for ROS interfaces\n'}
+[3.706334] (livox_ros_driver2) StdoutLine: {'line': b'[ 22%] Generating C type support for eProsima Fast-RTPS\n'}
+[3.706396] (livox_ros_driver2) StdoutLine: {'line': b'[ 22%] Generating C introspection for ROS interfaces\n'}
+[3.804198] (-) TimerEvent: {}
+[3.824262] (livox_ros_driver2) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/livox_ros_driver2/msg/custom_point__type_support.cpp.o\n'}
+[3.824444] (livox_ros_driver2) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/livox_ros_driver2/msg/custom_msg__type_support.cpp.o\n'}
+[3.832794] (livox_ros_driver2) StdoutLine: {'line': b'[ 27%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/livox_ros_driver2/msg/detail/custom_point__type_support.cpp.o\n'}
+[3.833769] (livox_ros_driver2) StdoutLine: {'line': b'[ 29%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/livox_ros_driver2/msg/detail/custom_msg__type_support.cpp.o\n'}
+[3.849202] (livox_ros_driver2) StdoutLine: {'line': b'[ 31%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/livox_ros_driver2/msg/detail/dds_fastrtps/custom_point__type_support.cpp.o\n'}
+[3.849455] (livox_ros_driver2) StdoutLine: {'line': b'[ 32%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/livox_ros_driver2/msg/detail/dds_fastrtps/custom_msg__type_support.cpp.o\n'}
+[3.904296] (-) TimerEvent: {}
+[3.984499] (livox_ros_driver2) StdoutLine: {'line': b'[ 34%] Building C object CMakeFiles/livox_interfaces2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/livox_ros_driver2/msg/detail/custom_msg__type_support.c.o\n'}
+[3.984681] (livox_ros_driver2) StdoutLine: {'line': b'[ 36%] Building C object CMakeFiles/livox_interfaces2__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/livox_ros_driver2/msg/detail/custom_point__type_support.c.o\n'}
+[3.993550] (livox_ros_driver2) StdoutLine: {'line': b'[ 39%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/livox_ros_driver2/msg/detail/custom_msg__type_support_c.cpp.o\n'}
+[3.993740] (livox_ros_driver2) StdoutLine: {'line': b'[ 39%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/livox_ros_driver2/msg/detail/custom_point__type_support_c.cpp.o\n'}
+[4.006333] (-) TimerEvent: {}
+[4.023762] (livox_ros_driver2) StdoutLine: {'line': b'[ 43%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_c.dir/rosidl_typesupport_c/livox_ros_driver2/msg/custom_point__type_support.cpp.o\n'}
+[4.023975] (livox_ros_driver2) StdoutLine: {'line': b'[ 43%] Building CXX object CMakeFiles/livox_interfaces2__rosidl_typesupport_c.dir/rosidl_typesupport_c/livox_ros_driver2/msg/custom_msg__type_support.cpp.o\n'}
+[4.049932] (livox_ros_driver2) StdoutLine: {'line': b'[ 44%] Linking C shared library liblivox_ros_driver2__rosidl_typesupport_introspection_c.so\n'}
+[4.058126] (livox_ros_driver2) StdoutLine: {'line': b'[ 46%] Linking CXX shared library liblivox_ros_driver2__rosidl_typesupport_c.so\n'}
+[4.084657] (livox_ros_driver2) StdoutLine: {'line': b'[ 48%] Linking CXX shared library liblivox_ros_driver2__rosidl_typesupport_cpp.so\n'}
+[4.087102] (livox_ros_driver2) StdoutLine: {'line': b'[ 48%] Built target livox_interfaces2__rosidl_typesupport_introspection_c\n'}
+[4.100673] (livox_ros_driver2) StdoutLine: {'line': b'[ 48%] Built target livox_interfaces2__rosidl_typesupport_c\n'}
+[4.106395] (-) TimerEvent: {}
+[4.131407] (livox_ros_driver2) StdoutLine: {'line': b'[ 48%] Built target livox_interfaces2__rosidl_typesupport_cpp\n'}
+[4.155509] (livox_ros_driver2) StdoutLine: {'line': b'[ 58%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/comm/comm.cpp.o\n'}
+[4.155708] (livox_ros_driver2) StdoutLine: {'line': b'[ 58%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/lds_lidar.cpp.o\n'}
+[4.155804] (livox_ros_driver2) StdoutLine: {'line': b'[ 58%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/lds.cpp.o\n'}
+[4.155891] (livox_ros_driver2) StdoutLine: {'line': b'[ 58%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/comm/ldq.cpp.o\n'}
+[4.155956] (livox_ros_driver2) StdoutLine: {'line': b'[ 58%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/lddc.cpp.o\n'}
+[4.158676] (livox_ros_driver2) StdoutLine: {'line': b'[ 58%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/driver_node.cpp.o\n'}
+[4.158851] (livox_ros_driver2) StdoutLine: {'line': b'[ 60%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/livox_ros_driver2.cpp.o\n'}
+[4.158937] (livox_ros_driver2) StdoutLine: {'line': b'[ 62%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/comm/semaphore.cpp.o\n'}
+[4.162150] (livox_ros_driver2) StdoutLine: {'line': b'[ 63%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/comm/lidar_imu_data_queue.cpp.o\n'}
+[4.162348] (livox_ros_driver2) StdoutLine: {'line': b'[ 65%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/comm/cache_index.cpp.o\n'}
+[4.173837] (livox_ros_driver2) StdoutLine: {'line': b'[ 67%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/comm/pub_handler.cpp.o\n'}
+[4.207405] (-) TimerEvent: {}
+[4.225412] (livox_ros_driver2) StdoutLine: {'line': b'[ 68%] Linking CXX shared library liblivox_ros_driver2__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.238439] (livox_ros_driver2) StdoutLine: {'line': b'[ 70%] Linking CXX shared library liblivox_ros_driver2__rosidl_typesupport_introspection_cpp.so\n'}
+[4.297821] (livox_ros_driver2) StdoutLine: {'line': b'[ 74%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/parse_cfg_file/parse_cfg_file.cpp.o\n'}
+[4.298014] (livox_ros_driver2) StdoutLine: {'line': b'[ 74%] Linking CXX shared library liblivox_ros_driver2__rosidl_typesupport_fastrtps_c.so\n'}
+[4.308748] (-) TimerEvent: {}
+[4.350298] (livox_ros_driver2) StdoutLine: {'line': b'[ 74%] Built target livox_interfaces2__rosidl_typesupport_introspection_cpp\n'}
+[4.360686] (livox_ros_driver2) StdoutLine: {'line': b'[ 75%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/parse_cfg_file/parse_livox_lidar_cfg.cpp.o\n'}
+[4.366380] (livox_ros_driver2) StdoutLine: {'line': b'[ 75%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_cpp\n'}
+[4.376691] (livox_ros_driver2) StdoutLine: {'line': b'[ 77%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/call_back/lidar_common_callback.cpp.o\n'}
+[4.408852] (-) TimerEvent: {}
+[4.410503] (livox_ros_driver2) StdoutLine: {'line': b'[ 77%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_c\n'}
+[4.422652] (livox_ros_driver2) StdoutLine: {'line': b'[ 79%] Building CXX object CMakeFiles/livox_ros_driver2.dir/src/call_back/livox_lidar_callback.cpp.o\n'}
+[4.508954] (-) TimerEvent: {}
+[4.560905] (livox_ros_driver2) StdoutLine: {'line': b'[ 79%] Built target livox_interfaces2\n'}
+[4.584612] (livox_ros_driver2) StdoutLine: {'line': b'[ 81%] Generating Python code for ROS interfaces\n'}
+[4.609869] (-) TimerEvent: {}
+[4.710257] (-) TimerEvent: {}
+[4.810469] (-) TimerEvent: {}
+[4.911376] (-) TimerEvent: {}
+[5.011554] (-) TimerEvent: {}
+[5.111734] (-) TimerEvent: {}
+[5.198950] (livox_ros_driver2) StdoutLine: {'line': b'[ 81%] Built target livox_interfaces2__py\n'}
+[5.211841] (-) TimerEvent: {}
+[5.218142] (livox_ros_driver2) StdoutLine: {'line': b'[ 82%] Building C object CMakeFiles/livox_interfaces2__rosidl_generator_py.dir/rosidl_generator_py/livox_ros_driver2/msg/_custom_point_s.c.o\n'}
+[5.218308] (livox_ros_driver2) StdoutLine: {'line': b'[ 84%] Building C object CMakeFiles/livox_interfaces2__rosidl_generator_py.dir/rosidl_generator_py/livox_ros_driver2/msg/_custom_msg_s.c.o\n'}
+[5.311941] (-) TimerEvent: {}
+[5.362234] (livox_ros_driver2) StdoutLine: {'line': b'[ 86%] Linking C shared library rosidl_generator_py/livox_ros_driver2/liblivox_interfaces2__rosidl_generator_py.so\n'}
+[5.398752] (livox_ros_driver2) StdoutLine: {'line': b'[ 86%] Built target livox_interfaces2__rosidl_generator_py\n'}
+[5.412097] (-) TimerEvent: {}
+[5.416727] (livox_ros_driver2) StdoutLine: {'line': b'[ 89%] Building C object CMakeFiles/livox_ros_driver2__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_c.c.o\n'}
+[5.416897] (livox_ros_driver2) StdoutLine: {'line': b'[ 89%] Building C object CMakeFiles/livox_ros_driver2__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_introspection_c.c.o\n'}
+[5.416964] (livox_ros_driver2) StdoutLine: {'line': b'[ 91%] Building C object CMakeFiles/livox_ros_driver2__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_fastrtps_c.c.o\n'}
+[5.512230] (-) TimerEvent: {}
+[5.521533] (livox_ros_driver2) StdoutLine: {'line': b'[ 94%] Linking C shared library rosidl_generator_py/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.521712] (livox_ros_driver2) StdoutLine: {'line': b'[ 94%] Linking C shared library rosidl_generator_py/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.543010] (livox_ros_driver2) StdoutLine: {'line': b'[ 96%] Linking C shared library rosidl_generator_py/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.552509] (livox_ros_driver2) StdoutLine: {'line': b'[ 96%] Built target livox_ros_driver2__rosidl_typesupport_fastrtps_c__pyext\n'}
+[5.552657] (livox_ros_driver2) StdoutLine: {'line': b'[ 96%] Built target livox_ros_driver2__rosidl_typesupport_introspection_c__pyext\n'}
+[5.574646] (livox_ros_driver2) StdoutLine: {'line': b'[ 96%] Built target livox_ros_driver2__rosidl_typesupport_c__pyext\n'}
+[5.612309] (-) TimerEvent: {}
+[5.712544] (-) TimerEvent: {}
+[5.812738] (-) TimerEvent: {}
+[5.912931] (-) TimerEvent: {}
+[6.013126] (-) TimerEvent: {}
+[6.113338] (-) TimerEvent: {}
+[6.213527] (-) TimerEvent: {}
+[6.237513] (livox_ros_driver2) StdoutLine: {'line': b'[ 98%] Linking CXX executable livox_ros_driver2_node\n'}
+[6.313653] (-) TimerEvent: {}
+[6.358677] (livox_ros_driver2) StdoutLine: {'line': b'[ 98%] Built target livox_ros_driver2_node\n'}
+[6.413750] (-) TimerEvent: {}
+[6.513939] (-) TimerEvent: {}
+[6.614158] (-) TimerEvent: {}
+[6.714390] (-) TimerEvent: {}
+[6.814589] (-) TimerEvent: {}
+[6.914821] (-) TimerEvent: {}
+[7.015029] (-) TimerEvent: {}
+[7.115257] (-) TimerEvent: {}
+[7.215525] (-) TimerEvent: {}
+[7.315852] (-) TimerEvent: {}
+[7.416056] (-) TimerEvent: {}
+[7.516276] (-) TimerEvent: {}
+[7.616503] (-) TimerEvent: {}
+[7.716690] (-) TimerEvent: {}
+[7.816888] (-) TimerEvent: {}
+[7.917125] (-) TimerEvent: {}
+[8.017385] (-) TimerEvent: {}
+[8.117574] (-) TimerEvent: {}
+[8.217766] (-) TimerEvent: {}
+[8.317958] (-) TimerEvent: {}
+[8.418148] (-) TimerEvent: {}
+[8.518332] (-) TimerEvent: {}
+[8.618508] (-) TimerEvent: {}
+[8.718677] (-) TimerEvent: {}
+[8.818901] (-) TimerEvent: {}
+[8.919134] (-) TimerEvent: {}
+[9.019404] (-) TimerEvent: {}
+[9.119624] (-) TimerEvent: {}
+[9.219870] (-) TimerEvent: {}
+[9.320129] (-) TimerEvent: {}
+[9.420365] (-) TimerEvent: {}
+[9.520620] (-) TimerEvent: {}
+[9.620893] (-) TimerEvent: {}
+[9.721173] (-) TimerEvent: {}
+[9.821464] (-) TimerEvent: {}
+[9.921725] (-) TimerEvent: {}
+[10.021961] (-) TimerEvent: {}
+[10.122180] (-) TimerEvent: {}
+[10.222403] (-) TimerEvent: {}
+[10.322656] (-) TimerEvent: {}
+[10.422943] (-) TimerEvent: {}
+[10.523159] (-) TimerEvent: {}
+[10.623412] (-) TimerEvent: {}
+[10.723635] (-) TimerEvent: {}
+[10.823899] (-) TimerEvent: {}
+[10.837680] (livox_ros_driver2) StdoutLine: {'line': b'[100%] Linking CXX shared library liblivox_ros_driver2.so\n'}
+[10.924013] (-) TimerEvent: {}
+[11.024241] (-) TimerEvent: {}
+[11.124501] (-) TimerEvent: {}
+[11.224723] (-) TimerEvent: {}
+[11.260306] (livox_ros_driver2) StdoutLine: {'line': b'[100%] Built target livox_ros_driver2\n'}
+[11.272978] (livox_ros_driver2) CommandEnded: {'returncode': 0}
+[11.273436] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'install'}
+[11.280339] (livox_ros_driver2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sangyuwan/lidar/build/livox_ros_driver2'], 'cwd': '/home/sangyuwan/lidar/build/livox_ros_driver2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'sangyuwan'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/sangyuwan/STM32CubeMX'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/sangyuwan/lidar/third_party/Livox-SDK2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64'), ('HOME', '/home/sangyuwan'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'cat'), ('LIVOX_LIDAR_SDK_ROOT', '/home/sangyuwan/lidar/third_party/Livox-SDK2/install'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2302'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('_CE_M', ''), ('https_proxy', 'http://127.0.0.1:7897/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'sangyuwan'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/sangyuwan/.local/bin:/home/sangyuwan/.codex/tmp/arg0/codex-arg0Uz7cGc:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/sangyuwan/.local/bin:/opt/ros/humble/bin:/home/sangyuwan/anaconda3/condabin:/usr/local/cuda-12.8/bin:/home/sangyuwan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:@/tmp/.ICE-unix/2083,unix/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:/tmp/.ICE-unix/2083'), ('GDM_LANG', 'zh_CN'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/62a2a973_b92f_42d0_9770_497a045623f2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/home/sangyuwan/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.208'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/sangyuwan'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/sangyuwan/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019e9c2c-2052-7d32-909f-23b035974b0a'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sangyuwan/lidar/build/livox_ros_driver2'), ('LC_ALL', 'C.UTF-8'), ('CODEX_MANAGED_PACKAGE_ROOT', '/usr/lib/node_modules/@openai/codex'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sangyuwan/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('CODEX_MANAGED_BY_NPM', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[11.287238] (livox_ros_driver2) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[11.287629] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/ament_index/resource_index/rosidl_interfaces/livox_ros_driver2\n'}
+[11.287822] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[11.287897] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[11.287963] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_generator_c__visibility_control.h\n'}
+[11.288028] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_point.h\n'}
+[11.288092] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[11.288158] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__functions.c\n'}
+[11.288657] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__functions.h\n'}
+[11.288838] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__struct.h\n'}
+[11.288923] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.h\n'}
+[11.288990] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__functions.c\n'}
+[11.289150] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__functions.h\n'}
+[11.289334] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__struct.h\n'}
+[11.289421] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.h\n'}
+[11.289497] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_msg.h\n'}
+[11.289623] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.sh\n'}
+[11.289704] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.dsv\n'}
+[11.289822] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_generator_c.so\n'}
+[11.290463] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_generator_c.so" to ""\n'}
+[11.290583] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[11.290672] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[11.290737] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[11.290775] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[11.290837] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_c.h\n'}
+[11.290872] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[11.290904] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_c.so\n'}
+[11.291295] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[11.291409] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[11.291447] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[11.291526] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[11.291590] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[11.291623] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_c.h\n'}
+[11.291655] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.c\n'}
+[11.291753] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_c.h\n'}
+[11.291828] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.c\n'}
+[11.292048] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_c.so\n'}
+[11.292632] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_c.so" to ""\n'}
+[11.292707] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_c.so\n'}
+[11.293134] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_c.so" to ""\n'}
+[11.293246] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[11.293284] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[11.293347] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[11.293432] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_point.hpp\n'}
+[11.293465] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[11.293497] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__builder.hpp\n'}
+[11.293618] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__struct.hpp\n'}
+[11.293818] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__traits.hpp\n'}
+[11.294016] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.hpp\n'}
+[11.294112] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__builder.hpp\n'}
+[11.294303] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__struct.hpp\n'}
+[11.294492] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__traits.hpp\n'}
+[11.294686] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.hpp\n'}
+[11.294762] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_msg.hpp\n'}
+[11.294855] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[11.294944] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[11.295034] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[11.295077] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[11.295110] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.295384] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/dds_fastrtps\n'}
+[11.295443] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.296034] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_cpp.so\n'}
+[11.296717] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[11.296789] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[11.296883] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[11.296924] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[11.296962] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.297005] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.cpp\n'}
+[11.297092] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.297199] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.cpp\n'}
+[11.297460] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_cpp.so\n'}
+[11.298053] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[11.298145] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_cpp.so\n'}
+[11.298674] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_cpp.so" to ""\n'}
+[11.298782] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.sh\n'}
+[11.298876] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.dsv\n'}
+[11.298994] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info\n'}
+[11.299089] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[11.299190] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[11.299290] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[11.299395] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[11.299510] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2\n'}
+[11.299604] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/__init__.py\n'}
+[11.299687] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg\n'}
+[11.299777] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_point.py\n'}
+[11.299975] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_point_s.c\n'}
+[11.300199] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_msg.py\n'}
+[11.300392] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_msg_s.c\n'}
+[11.300591] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/__init__.py\n'}
+[11.300688] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[11.300896] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[11.301094] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_c.c\n'}
+[11.301305] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/liblivox_interfaces2__rosidl_generator_py.so\n'}
+[11.301553] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.301777] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.301994] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.324833] (-) TimerEvent: {}
+[11.327375] (livox_ros_driver2) StdoutLine: {'line': b"Listing '/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2'...\n"}
+[11.327578] (livox_ros_driver2) StdoutLine: {'line': b"Compiling '/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/__init__.py'...\n"}
+[11.327683] (livox_ros_driver2) StdoutLine: {'line': b"Listing '/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg'...\n"}
+[11.327777] (livox_ros_driver2) StdoutLine: {'line': b"Compiling '/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/__init__.py'...\n"}
+[11.327864] (livox_ros_driver2) StdoutLine: {'line': b"Compiling '/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_msg.py'...\n"}
+[11.327947] (livox_ros_driver2) StdoutLine: {'line': b"Compiling '/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_point.py'...\n"}
+[11.332302] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.332781] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[11.333250] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.333638] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[11.333917] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[11.334285] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[11.334416] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_interfaces2__rosidl_generator_py.so\n'}
+[11.334735] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_interfaces2__rosidl_generator_py.so" to ""\n'}
+[11.334881] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/ament_index/resource_index/rust_packages/livox_ros_driver2\n'}
+[11.334954] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/rust\n'}
+[11.335012] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/rust/src\n'}
+[11.335066] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/rust/src/msg.rs\n'}
+[11.335288] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/rust/src/msg\n'}
+[11.335348] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/rust/src/msg/rmw.rs\n'}
+[11.335557] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/rust/src/lib.rs\n'}
+[11.335631] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/rust/Cargo.toml\n'}
+[11.335718] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/rust/build.rs\n'}
+[11.335836] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.idl\n'}
+[11.335934] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.idl\n'}
+[11.336067] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.msg\n'}
+[11.336159] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.msg\n'}
+[11.336269] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node\n'}
+[11.337277] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node" to ""\n'}
+[11.337345] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2.so\n'}
+[11.339416] (livox_ros_driver2) StdoutLine: {'line': b'-- Set runtime path of "/home/sangyuwan/lidar/install/livox_ros_driver2/lib/liblivox_ros_driver2.so" to ""\n'}
+[11.339589] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/config\n'}
+[11.339738] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/config/HAP_config.json\n'}
+[11.339820] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json\n'}
+[11.339914] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360s_config.json\n'}
+[11.340003] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS1.rviz\n'}
+[11.340089] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS2.rviz\n'}
+[11.340200] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/config/mixed_HAP_MID360_config.json\n'}
+[11.340378] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2\n'}
+[11.340472] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_HAP_launch.py\n'}
+[11.340557] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_MID360_launch.py\n'}
+[11.340635] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_MID360s_launch.py\n'}
+[11.340705] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_HAP_launch.py\n'}
+[11.340809] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_MID360_launch.py\n'}
+[11.340843] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_MID360s_launch.py\n'}
+[11.340916] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_mixed.py\n'}
+[11.340992] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/ament_index/resource_index/package_run_dependencies/livox_ros_driver2\n'}
+[11.341119] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/ament_index/resource_index/parent_prefix_path/livox_ros_driver2\n'}
+[11.341210] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.sh\n'}
+[11.341289] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.dsv\n'}
+[11.341381] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.sh\n'}
+[11.341460] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.dsv\n'}
+[11.341541] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.bash\n'}
+[11.341633] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.sh\n'}
+[11.341693] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.zsh\n'}
+[11.341764] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.dsv\n'}
+[11.341846] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv\n'}
+[11.341952] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/ament_index/resource_index/packages/livox_ros_driver2\n'}
+[11.342045] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/ament_index/resource_index/rclcpp_components/livox_ros_driver2\n'}
+[11.342162] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport.cmake\n'}
+[11.342402] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport-release.cmake\n'}
+[11.342506] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.342740] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport-release.cmake\n'}
+[11.342863] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.343072] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[11.343171] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport.cmake\n'}
+[11.343389] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport-release.cmake\n'}
+[11.343487] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cppExport.cmake\n'}
+[11.343682] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.343875] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cppExport-release.cmake\n'}
+[11.343972] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.344198] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[11.344297] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport.cmake\n'}
+[11.344511] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport-release.cmake\n'}
+[11.344626] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport.cmake\n'}
+[11.344845] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport-release.cmake\n'}
+[11.344937] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake-extras.cmake\n'}
+[11.345015] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.345092] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.345174] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.345247] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.345305] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[11.345384] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[11.345464] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake\n'}
+[11.345536] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config-version.cmake\n'}
+[11.345614] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/livox_ros_driver2/share/livox_ros_driver2/package.xml\n'}
+[11.347259] (livox_ros_driver2) CommandEnded: {'returncode': 0}
+[11.362161] (livox_ros_driver2) JobEnded: {'identifier': 'livox_ros_driver2', 'rc': 0}
+[11.363210] (lidar_bringup) JobStarted: {'identifier': 'lidar_bringup'}
+[11.369824] (lidar_bringup) JobProgress: {'identifier': 'lidar_bringup', 'progress': 'cmake'}
+[11.370283] (lidar_bringup) Command: {'cmd': ['/usr/bin/cmake', '/home/sangyuwan/lidar/src/lidar_bringup', '-DROS_EDITION=ROS2', '-DDISTRO_ROS=humble', '-DLIVOX_LIDAR_SDK_ROOT=/home/sangyuwan/lidar/third_party/Livox-SDK2/install', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_INSTALL_PREFIX=/home/sangyuwan/lidar/install/lidar_bringup'], 'cwd': '/home/sangyuwan/lidar/build/lidar_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'sangyuwan'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/sangyuwan/STM32CubeMX'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/sangyuwan/lidar/install/livox_ros_driver2/lib:/home/sangyuwan/lidar/third_party/Livox-SDK2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64'), ('HOME', '/home/sangyuwan'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'cat'), ('LIVOX_LIDAR_SDK_ROOT', '/home/sangyuwan/lidar/third_party/Livox-SDK2/install'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2302'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('_CE_M', ''), ('https_proxy', 'http://127.0.0.1:7897/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'sangyuwan'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/sangyuwan/.local/bin:/home/sangyuwan/.codex/tmp/arg0/codex-arg0Uz7cGc:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/sangyuwan/.local/bin:/opt/ros/humble/bin:/home/sangyuwan/anaconda3/condabin:/usr/local/cuda-12.8/bin:/home/sangyuwan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:@/tmp/.ICE-unix/2083,unix/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:/tmp/.ICE-unix/2083'), ('GDM_LANG', 'zh_CN'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/62a2a973_b92f_42d0_9770_497a045623f2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/home/sangyuwan/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.208'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/sangyuwan'), ('AMENT_PREFIX_PATH', '/home/sangyuwan/lidar/install/livox_ros_driver2:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/sangyuwan/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019e9c2c-2052-7d32-909f-23b035974b0a'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sangyuwan/lidar/build/lidar_bringup'), ('LC_ALL', 'C.UTF-8'), ('CODEX_MANAGED_PACKAGE_ROOT', '/usr/lib/node_modules/@openai/codex'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sangyuwan/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('CODEX_MANAGED_BY_NPM', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/sangyuwan/lidar/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[11.417910] (lidar_bringup) StdoutLine: {'line': b'-- The C compiler identification is GNU 12.3.0\n'}
+[11.424903] (-) TimerEvent: {}
+[11.460595] (lidar_bringup) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[11.467209] (lidar_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[11.525108] (lidar_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[11.525230] (-) TimerEvent: {}
+[11.529896] (lidar_bringup) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[11.530068] (lidar_bringup) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[11.530281] (lidar_bringup) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[11.532354] (lidar_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[11.601428] (lidar_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[11.605662] (lidar_bringup) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[11.605865] (lidar_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[11.606068] (lidar_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[11.607519] (lidar_bringup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[11.625307] (-) TimerEvent: {}
+[11.708824] (lidar_bringup) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[11.725412] (-) TimerEvent: {}
+[11.809561] (lidar_bringup) StdoutLine: {'line': b'-- Configuring done\n'}
+[11.811660] (lidar_bringup) StdoutLine: {'line': b'-- Generating done\n'}
+[11.812076] (lidar_bringup) StderrLine: {'line': b'CMake Warning:\n'}
+[11.812180] (lidar_bringup) StderrLine: {'line': b'  Manually-specified variables were not used by the project:\n'}
+[11.812284] (lidar_bringup) StderrLine: {'line': b'\n'}
+[11.812375] (lidar_bringup) StderrLine: {'line': b'    DISTRO_ROS\n'}
+[11.812440] (lidar_bringup) StderrLine: {'line': b'    LIVOX_LIDAR_SDK_ROOT\n'}
+[11.812503] (lidar_bringup) StderrLine: {'line': b'    ROS_EDITION\n'}
+[11.812563] (lidar_bringup) StderrLine: {'line': b'\n'}
+[11.812623] (lidar_bringup) StderrLine: {'line': b'\n'}
+[11.812796] (lidar_bringup) StdoutLine: {'line': b'-- Build files have been written to: /home/sangyuwan/lidar/build/lidar_bringup\n'}
+[11.817841] (lidar_bringup) CommandEnded: {'returncode': 0}
+[11.818750] (lidar_bringup) JobProgress: {'identifier': 'lidar_bringup', 'progress': 'build'}
+[11.818787] (lidar_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sangyuwan/lidar/build/lidar_bringup', '--', '-j16', '-l16'], 'cwd': '/home/sangyuwan/lidar/build/lidar_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'sangyuwan'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/sangyuwan/STM32CubeMX'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/sangyuwan/lidar/install/livox_ros_driver2/lib:/home/sangyuwan/lidar/third_party/Livox-SDK2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64'), ('HOME', '/home/sangyuwan'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'cat'), ('LIVOX_LIDAR_SDK_ROOT', '/home/sangyuwan/lidar/third_party/Livox-SDK2/install'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2302'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('_CE_M', ''), ('https_proxy', 'http://127.0.0.1:7897/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'sangyuwan'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/sangyuwan/.local/bin:/home/sangyuwan/.codex/tmp/arg0/codex-arg0Uz7cGc:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/sangyuwan/.local/bin:/opt/ros/humble/bin:/home/sangyuwan/anaconda3/condabin:/usr/local/cuda-12.8/bin:/home/sangyuwan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:@/tmp/.ICE-unix/2083,unix/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:/tmp/.ICE-unix/2083'), ('GDM_LANG', 'zh_CN'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/62a2a973_b92f_42d0_9770_497a045623f2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/home/sangyuwan/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.208'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/sangyuwan'), ('AMENT_PREFIX_PATH', '/home/sangyuwan/lidar/install/livox_ros_driver2:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/sangyuwan/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019e9c2c-2052-7d32-909f-23b035974b0a'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sangyuwan/lidar/build/lidar_bringup'), ('LC_ALL', 'C.UTF-8'), ('CODEX_MANAGED_PACKAGE_ROOT', '/usr/lib/node_modules/@openai/codex'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sangyuwan/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('CODEX_MANAGED_BY_NPM', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/sangyuwan/lidar/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[11.825467] (-) TimerEvent: {}
+[11.855390] (lidar_bringup) CommandEnded: {'returncode': 0}
+[11.855863] (lidar_bringup) JobProgress: {'identifier': 'lidar_bringup', 'progress': 'install'}
+[11.855998] (lidar_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sangyuwan/lidar/build/lidar_bringup'], 'cwd': '/home/sangyuwan/lidar/build/lidar_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('CODEX_CI', '1'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'sangyuwan'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('STM32CubeMX_PATH', '/home/sangyuwan/STM32CubeMX'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/sangyuwan/lidar/install/livox_ros_driver2/lib:/home/sangyuwan/lidar/third_party/Livox-SDK2/install/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.8/lib64'), ('HOME', '/home/sangyuwan'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('PAGER', 'cat'), ('LIVOX_LIDAR_SDK_ROOT', '/home/sangyuwan/lidar/third_party/Livox-SDK2/install'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2302'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('_CE_M', ''), ('https_proxy', 'http://127.0.0.1:7897/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'sangyuwan'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/sangyuwan/.local/bin:/home/sangyuwan/.codex/tmp/arg0/codex-arg0Uz7cGc:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/sangyuwan/.local/bin:/opt/ros/humble/bin:/home/sangyuwan/anaconda3/condabin:/usr/local/cuda-12.8/bin:/home/sangyuwan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:@/tmp/.ICE-unix/2083,unix/sangyuwan-OMEN-by-HP-Gaming-Laptop-16-xf0xxx:/tmp/.ICE-unix/2083'), ('GDM_LANG', 'zh_CN'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/62a2a973_b92f_42d0_9770_497a045623f2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/home/sangyuwan/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.208'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/sangyuwan'), ('AMENT_PREFIX_PATH', '/home/sangyuwan/lidar/install/livox_ros_driver2:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/sangyuwan/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019e9c2c-2052-7d32-909f-23b035974b0a'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sangyuwan/lidar/build/lidar_bringup'), ('LC_ALL', 'C.UTF-8'), ('CODEX_MANAGED_PACKAGE_ROOT', '/usr/lib/node_modules/@openai/codex'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sangyuwan/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sangyuwan/lidar/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('CODEX_MANAGED_BY_NPM', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/sangyuwan/lidar/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[11.862194] (lidar_bringup) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[11.862331] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/config\n'}
+[11.862452] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/config/mid360_config.json\n'}
+[11.862606] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/launch\n'}
+[11.862717] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/launch/mid360_pointcloud.launch.py\n'}
+[11.862824] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/launch/mid360_custom_msg.launch.py\n'}
+[11.862969] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/rviz\n'}
+[11.863144] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/rviz/mid360.rviz\n'}
+[11.863344] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/ament_index/resource_index/package_run_dependencies/lidar_bringup\n'}
+[11.863446] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/ament_index/resource_index/parent_prefix_path/lidar_bringup\n'}
+[11.863585] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/environment/ament_prefix_path.sh\n'}
+[11.863685] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/environment/ament_prefix_path.dsv\n'}
+[11.863733] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/environment/path.sh\n'}
+[11.863805] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/environment/path.dsv\n'}
+[11.863848] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/local_setup.bash\n'}
+[11.863887] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/local_setup.sh\n'}
+[11.863938] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/local_setup.zsh\n'}
+[11.863985] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/local_setup.dsv\n'}
+[11.864023] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/package.dsv\n'}
+[11.864127] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/ament_index/resource_index/packages/lidar_bringup\n'}
+[11.864298] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/cmake/lidar_bringupConfig.cmake\n'}
+[11.864434] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/cmake/lidar_bringupConfig-version.cmake\n'}
+[11.864583] (lidar_bringup) StdoutLine: {'line': b'-- Installing: /home/sangyuwan/lidar/install/lidar_bringup/share/lidar_bringup/package.xml\n'}
+[11.865970] (lidar_bringup) CommandEnded: {'returncode': 0}
+[11.874349] (lidar_bringup) JobEnded: {'identifier': 'lidar_bringup', 'rc': 0}
+[11.874835] (-) EventReactorShutdown: {}
