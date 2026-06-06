@@ -6,9 +6,17 @@ import rclpy
 from geometry_msgs.msg import PointStamped, Pose, PoseStamped, TransformStamped
 from nav_msgs.msg import Odometry
 from rclpy.node import Node
+from std_srvs.srv import Trigger
 from tf2_ros import TransformBroadcaster
 
-from .pose_math import point_from_iter, quat_from_rpy, quat_multiply, rotate_point, rpy_from_quat
+from .pose_math import (
+    point_from_iter,
+    quat_from_rpy,
+    quat_inverse,
+    quat_multiply,
+    rotate_point,
+    rpy_from_quat,
+)
 
 
 class PoseFromOdom(Node):
@@ -25,6 +33,9 @@ class PoseFromOdom(Node):
         self.declare_parameter("base_frame", "base_link")
         self.declare_parameter("publish_tf", False)
         self.declare_parameter("output_base_frame", False)
+        self.declare_parameter("zero_on_first_pose", True)
+        self.declare_parameter("zero_delay_sec", 5.0)
+        self.declare_parameter("zero_frame_id", "lidar_start")
         self.declare_parameter("lidar_to_base_xyz", [0.0, 0.0, 0.0])
         self.declare_parameter("lidar_to_base_rpy", [0.0, 0.0, 0.0])
         self.declare_parameter("log_period_sec", 1.0)
@@ -37,7 +48,14 @@ class PoseFromOdom(Node):
         self.base_frame = self.get_parameter("base_frame").value
         self.publish_tf = bool(self.get_parameter("publish_tf").value)
         self.output_base_frame = bool(self.get_parameter("output_base_frame").value)
+        self.zero_on_first_pose = bool(self.get_parameter("zero_on_first_pose").value)
+        self.zero_delay_sec = float(self.get_parameter("zero_delay_sec").value)
+        self.zero_frame_id = self.get_parameter("zero_frame_id").value
         self.log_period_sec = float(self.get_parameter("log_period_sec").value)
+        self.initial_pose: Pose | None = None
+        self.pending_origin_pose: Pose | None = None
+        self.first_odom_time = None
+        self.latest_pose: Pose | None = None
 
         self.lidar_to_base_translation = point_from_iter(
             self.get_parameter("lidar_to_base_xyz").value
@@ -59,6 +77,11 @@ class PoseFromOdom(Node):
             self.odom_callback,
             20,
         )
+        self.reset_origin_srv = self.create_service(
+            Trigger,
+            "/lidar/reset_origin",
+            self.reset_origin_callback,
+        )
 
         target = self.base_frame if self.output_base_frame else self.lidar_frame
         self.get_logger().info(
@@ -73,9 +96,17 @@ class PoseFromOdom(Node):
         if self.output_base_frame:
             pose = self.compose_lidar_to_base(pose)
             child_frame = self.base_frame
+        self.latest_pose = pose
+
+        frame_id = msg.header.frame_id
+        if self.zero_on_first_pose:
+            self.update_initial_pose(pose)
+            pose = self.pose_relative_to_initial(pose)
+            frame_id = self.zero_frame_id
 
         pose_msg = PoseStamped()
         pose_msg.header = msg.header
+        pose_msg.header.frame_id = frame_id
         pose_msg.pose = pose
         self.pose_pub.publish(pose_msg)
 
@@ -85,7 +116,7 @@ class PoseFromOdom(Node):
         self.point_pub.publish(point_msg)
 
         odom_msg = Odometry()
-        odom_msg.header = msg.header
+        odom_msg.header = pose_msg.header
         odom_msg.child_frame_id = child_frame
         odom_msg.pose.pose = pose
         odom_msg.pose.covariance = msg.pose.covariance
@@ -93,9 +124,40 @@ class PoseFromOdom(Node):
         self.odom_pub.publish(odom_msg)
 
         if self.tf_broadcaster:
-            self.broadcast_tf(msg.header.frame_id, child_frame, pose_msg)
+            self.broadcast_tf(frame_id, child_frame, pose_msg)
 
         self.log_pose(pose_msg, child_frame)
+
+    def update_initial_pose(self, pose: Pose) -> None:
+        if self.initial_pose is not None:
+            return
+
+        now = self.get_clock().now()
+        if self.first_odom_time is None:
+            self.first_odom_time = now
+            self.pending_origin_pose = pose
+            self.get_logger().info(
+                f"waiting {self.zero_delay_sec:.1f}s before locking output origin"
+            )
+
+        elapsed_sec = (now - self.first_odom_time).nanoseconds / 1e9
+        if elapsed_sec >= self.zero_delay_sec:
+            self.initial_pose = pose
+            self.get_logger().info("output origin locked from current pose")
+
+    def reset_origin_callback(self, request, response):
+        del request
+        if self.latest_pose is None:
+            response.success = False
+            response.message = "No odometry pose received yet."
+            return response
+
+        self.initial_pose = self.latest_pose
+        self.first_odom_time = self.get_clock().now()
+        response.success = True
+        response.message = "LiDAR output origin reset to current pose."
+        self.get_logger().info(response.message)
+        return response
 
     def compose_lidar_to_base(self, lidar_pose: Pose) -> Pose:
         rotated_offset = rotate_point(
@@ -109,6 +171,25 @@ class PoseFromOdom(Node):
             lidar_pose.orientation, self.lidar_to_base_rotation
         )
         return base_pose
+
+    def pose_relative_to_initial(self, pose: Pose) -> Pose:
+        if self.initial_pose is None:
+            zero_pose = Pose()
+            zero_pose.orientation.w = 1.0
+            return zero_pose
+
+        delta = PointStamped().point
+        delta.x = pose.position.x - self.initial_pose.position.x
+        delta.y = pose.position.y - self.initial_pose.position.y
+        delta.z = pose.position.z - self.initial_pose.position.z
+
+        initial_inv = quat_inverse(self.initial_pose.orientation)
+        relative_position = rotate_point(initial_inv, delta)
+
+        relative_pose = Pose()
+        relative_pose.position = relative_position
+        relative_pose.orientation = quat_multiply(initial_inv, pose.orientation)
+        return relative_pose
 
     def broadcast_tf(self, parent_frame: str, child_frame: str, pose_msg: PoseStamped) -> None:
         transform = TransformStamped()

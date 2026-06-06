@@ -33,6 +33,19 @@ def quat_conjugate(q: Quaternion) -> Quaternion:
     return Quaternion(x=-q.x, y=-q.y, z=-q.z, w=q.w)
 
 
+def quat_inverse(q: Quaternion) -> Quaternion:
+    norm = q.x * q.x + q.y * q.y + q.z * q.z + q.w * q.w
+    if norm <= 0.0:
+        return Quaternion(w=1.0)
+    conj = quat_conjugate(q)
+    return Quaternion(
+        x=conj.x / norm,
+        y=conj.y / norm,
+        z=conj.z / norm,
+        w=conj.w / norm,
+    )
+
+
 def rotate_point(q: Quaternion, p: Point) -> Point:
     pq = Quaternion(x=p.x, y=p.y, z=p.z, w=0.0)
     rotated = quat_multiply(quat_multiply(q, pq), quat_conjugate(q))

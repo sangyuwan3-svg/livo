@@ -72,6 +72,39 @@ This launch starts:
 - `fast_lio`: subscribes to `/livox/lidar` and `/livox/imu`, publishes `/Odometry`
 - `lidar_localization`: subscribes to `/Odometry`, publishes `/lidar/pose`, `/lidar/point`, and `/lidar/odom`
 
+## Mapping
+
+Start mapping:
+
+```bash
+cd ~/lidar
+./scripts/run_mid360_fast_lio.sh
+```
+
+Move the robot slowly through the environment. Start with 5-10 seconds still, then move smoothly and avoid fast spins during the first test.
+
+Check that mapping and odometry are alive:
+
+```bash
+source ~/lidar/scripts/source_lidar.sh
+ros2 topic hz /Odometry
+ros2 topic hz /cloud_registered
+ros2 topic hz /lidar/pose
+```
+
+Save the accumulated map:
+
+```bash
+cd ~/lidar
+./scripts/save_fast_lio_map.sh
+```
+
+The map is saved to:
+
+```bash
+~/lidar/maps/mid360_map.pcd
+```
+
 ## LiDAR Pose Coordinates
 
 After `run_mid360_fast_lio.sh` is running, print the current LiDAR pose:
@@ -99,6 +132,13 @@ For now, `/lidar/pose` represents the MID-360/LiDAR body pose produced from FAST
 
 ```bash
 ~/lidar/src/lidar_localization/config/lidar_pose_interface.yaml
+```
+
+By default, this workspace waits 5 seconds after the first FAST-LIO odometry message, then locks the `/lidar/*` output origin. Keep the robot still during those first 5 seconds. To reset the output origin later:
+
+```bash
+cd ~/lidar
+./scripts/reset_lidar_origin.sh
 ```
 
 When the LiDAR-to-vehicle-center extrinsic is measured, set:

@@ -1,8 +1,0 @@
-CMake Warning:
-  Manually-specified variables were not used by the project:
-
-    DISTRO_ROS
-    LIVOX_LIDAR_SDK_ROOT
-    ROS_EDITION
-
-

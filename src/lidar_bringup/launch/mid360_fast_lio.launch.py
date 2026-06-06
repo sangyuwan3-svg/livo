@@ -33,6 +33,9 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
+            "config_path": PathJoinSubstitution(
+                [FindPackageShare("fast_lio"), "config"]
+            ),
             "config_file": "mid360.yaml",
             "rviz": fast_lio_rviz,
         }.items(),

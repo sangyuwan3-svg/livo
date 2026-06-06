@@ -2,6 +2,7 @@
 import math
 
 import rclpy
+from rclpy.executors import ExternalShutdownException
 from geometry_msgs.msg import PoseStamped
 from rclpy.node import Node
 
@@ -45,9 +46,12 @@ def main() -> None:
     try:
         while rclpy.ok() and not node.done:
             rclpy.spin_once(node, timeout_sec=0.5)
+    except (KeyboardInterrupt, ExternalShutdownException):
+        pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == "__main__":

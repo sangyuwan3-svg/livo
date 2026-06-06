@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
 import argparse
 import math
+<<<<<<< ours
 from typing import Any, Iterable, Sequence
 
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
+=======
+from typing import Iterable, Sequence
+
+import rclpy
+from rclpy.node import Node
+>>>>>>> theirs
 from sensor_msgs.msg import PointCloud2
 from sensor_msgs_py import point_cloud2
 
 
+<<<<<<< ours
 def scalar(value: Any) -> Any:
     return value.item() if hasattr(value, "item") else value
 
@@ -29,6 +37,14 @@ def distance(point: dict[str, Any]) -> float:
     x = float(point["x"])
     y = float(point["y"])
     z = float(point["z"])
+=======
+def finite_xyz(point: Sequence[float]) -> bool:
+    return all(math.isfinite(float(value)) for value in point[:3])
+
+
+def distance(point: Sequence[float]) -> float:
+    x, y, z = (float(value) for value in point[:3])
+>>>>>>> theirs
     return math.sqrt(x * x + y * y + z * z)
 
 
@@ -38,7 +54,11 @@ class PointPrinter(Node):
         self.args = args
         self.printed_messages = 0
         self.subscription = self.create_subscription(
+<<<<<<< ours
             PointCloud2, args.topic, self.callback, qos_profile_sensor_data
+=======
+            PointCloud2, args.topic, self.callback, 10
+>>>>>>> theirs
         )
 
     def callback(self, msg: PointCloud2) -> None:
@@ -50,6 +70,7 @@ class PointPrinter(Node):
             rclpy.shutdown()
             return
 
+<<<<<<< ours
         raw_points = point_cloud2.read_points(
             msg,
             field_names=field_names,
@@ -64,6 +85,16 @@ class PointPrinter(Node):
             for point in points
             if finite_xyz(point)
         ]
+=======
+        points = list(
+            point_cloud2.read_points(
+                msg,
+                field_names=field_names,
+                skip_nans=True,
+            )
+        )
+        points = [point for point in points if finite_xyz(point)]
+>>>>>>> theirs
         if not points:
             self.get_logger().warn("received point cloud, but no finite xyz points")
             return
@@ -86,6 +117,7 @@ class PointPrinter(Node):
         if self.printed_messages >= self.args.messages:
             rclpy.shutdown()
 
+<<<<<<< ours
     def print_point(self, label: str, point: dict[str, Any], field_names: Iterable[str]) -> None:
         x = float(point["x"])
         y = float(point["y"])
@@ -94,6 +126,17 @@ class PointPrinter(Node):
         for name in ("intensity", "reflectivity", "tag", "line"):
             if name in field_names and name in point:
                 parts.append(f"{name}={point[name]}")
+=======
+    def print_point(self, label: str, point: Sequence[float], field_names: Iterable[str]) -> None:
+        values = dict(zip(field_names, point))
+        x = float(values["x"])
+        y = float(values["y"])
+        z = float(values["z"])
+        parts = [f"{label}: x={x:.3f} y={y:.3f} z={z:.3f} range={distance(point):.3f}m"]
+        for name in ("intensity", "reflectivity", "tag", "line"):
+            if name in values:
+                parts.append(f"{name}={values[name]}")
+>>>>>>> theirs
         print(" ".join(parts))
 
 

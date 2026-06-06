@@ -8,6 +8,9 @@ lidar_pose_from_odom:
     base_frame: base_link
     publish_tf: false
     output_base_frame: false
+    zero_on_first_pose: true
+    zero_delay_sec: 5.0
+    zero_frame_id: lidar_start
     lidar_to_base_xyz: [0.0, 0.0, 0.0]
     lidar_to_base_rpy: [0.0, 0.0, 0.0]
     log_period_sec: 1.0
