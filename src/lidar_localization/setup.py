@@ -21,6 +21,7 @@ setup(
     license="MIT",
     entry_points={
         "console_scripts": [
+            "canfd_pose_sender = lidar_localization.canfd_pose_sender:main",
             "pose_from_odom = lidar_localization.pose_from_odom:main",
             "print_lidar_pose = lidar_localization.print_lidar_pose:main",
             "print_xy_yaw = lidar_localization.print_xy_yaw:main",
